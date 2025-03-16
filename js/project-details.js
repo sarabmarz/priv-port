@@ -66,7 +66,6 @@ function generateProjectNavigation(index) {
     prevButton.innerHTML = `<div class="text-filter">Previous</div>`;
     prevButton.addEventListener("click", () => {
       window.location.hash = `#/projects/${prevProject.slug}`;
-      location.reload(); // Reload to fetch new project details
     });
     navContainer.appendChild(prevButton);
   }
@@ -78,7 +77,6 @@ function generateProjectNavigation(index) {
     nextButton.innerHTML = `<div class="text-filter">Next</div>`;
     nextButton.addEventListener("click", () => {
       window.location.hash = `#/projects/${nextProject.slug}`;
-      location.reload(); // Reload to fetch new project details
     });
     navContainer.appendChild(nextButton);
   }
