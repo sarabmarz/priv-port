@@ -1,5 +1,6 @@
-const hash = window.location.hash; // Get the hash from the URL
-const slug = hash.split("/").pop(); // Extract the slug from the hash
+const hash = window.location.hash; 
+const slug = hash.startsWith("#/projects/") ? hash.replace("#/projects/", "") : "";
+
 
 // Find the project by slug
 const projectIndex = projects.findIndex((proj) => proj.slug === slug);
