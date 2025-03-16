@@ -1,0 +1,5 @@
+:root {
+  --BLACK: rgba(12, 12, 12, 1);
+  --WHITE: rgba(254, 255, 251, 1);
+  --BLACK-HOVER: rgba(12, 12, 12, 0.25);
+}
