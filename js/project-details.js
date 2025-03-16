@@ -94,3 +94,14 @@ if (project) {
 
 // Generate the project details dynamically
 generateProjectCardSingle(project);
+
+window.addEventListener("hashchange", () => {
+  const hash = window.location.hash;
+  const slug = hash.startsWith("#/projects/") ? hash.replace("#/projects/", "") : "";
+  
+  const projectIndex = projects.findIndex((proj) => proj.slug === slug);
+  const project = projects[projectIndex];
+
+  generateProjectCardSingle(project);
+});
+
