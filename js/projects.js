@@ -1,35 +1,21 @@
 const projects = [
   {
-    id: "project-1",
+    id: "project1",
     title: "My Awesome Project",
-    slug: "my-awesome-project", // Slug for SEO-friendly URL
     type: "Games",
     year: "2023",
     language: "JavaScript",
     description: "This is a detailed description of My Awesome Project.",
   },
   {
-    id: "project-2",
+    id: "project2",
     title: "Another Great Project",
-    slug: "another-great-project",
     type: "Web Projects",
     year: "2022",
     language: "Unity",
     description: "This is a detailed description of Another Great Project.",
   },
 ];
-
-function generateSlug(title) {
-  return title
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-") // Replace non-alphanumeric characters with hyphens
-    .replace(/^-+|-+$/g, ""); // Trim hyphens from start and end
-}
-
-// Apply slug generation to all projects
-projects.forEach((project) => {
-  project.slug = generateSlug(project.title);
-});
 
 let projectsPerPage = 6; // Number of projects per page
 let currentPage = 1;
@@ -44,7 +30,9 @@ function generateProjectCards(page = 1) {
   const end = page * projectsPerPage;
   const visibleProjects = filteredProjects.slice(start, end);
 
-  visibleProjects.forEach((project) => {
+  visibleProjects.forEach((project, index) => {
+    const projectPage = `projects/project${index + 1}.html`; // Include folder path
+
     const card = document.createElement("div");
     card.classList.add(
       "project-card",
@@ -52,8 +40,8 @@ function generateProjectCards(page = 1) {
     );
 
     card.innerHTML = `
-        <div class="card-hover">
-        <a href="#/projects/${project.slug}" class="button">
+      <div class="card-hover">
+        <a href="${projectPage}" class="button"> <!-- Now correctly points to the folder -->
           <div class="text-filter">SEE MORE</div>
         </a>
       </div>
