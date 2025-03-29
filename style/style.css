@@ -154,11 +154,13 @@
   height: 1px;
 } */
 
-.line, .img {
-  display: block; /* Ensures they are visible */
-  width: auto; /* Adjust width as needed */
-  height: auto; /* Ensures correct aspect ratio */
-  max-width: 100%; /* Prevents them from overflowing */
+.svg-container-small {
+  display: flex;
+  justify-content: center; /* Center the small SVG */
+}
+
+.svg-container-large {
+  width: 100%; /* Make sure the container fills the full width */
 }
 
 .main .text-wrapper {
