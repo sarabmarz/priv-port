@@ -141,10 +141,24 @@
   background-color: var(--BLACK);
 }
 
-.main .line {
+/* .main .line {
   width: 40px;
   position: relative;
   height: 1px;
+}
+
+.main .img {
+  flex: 1;
+  flex-grow: 1;
+  position: relative;
+  height: 1px;
+} */
+
+.line, .img {
+  display: block; /* Ensures they are visible */
+  width: auto; /* Adjust width as needed */
+  height: auto; /* Ensures correct aspect ratio */
+  max-width: 100%; /* Prevents them from overflowing */
 }
 
 .main .text-wrapper {
@@ -181,13 +195,6 @@
   font-size: 64px;
   letter-spacing: 0;
   line-height: normal;
-}
-
-.main .img {
-  flex: 1;
-  flex-grow: 1;
-  position: relative;
-  height: 1px;
 }
 
 .main .filter {
