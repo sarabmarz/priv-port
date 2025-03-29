@@ -141,26 +141,14 @@
   background-color: var(--BLACK);
 }
 
-/* .main .line {
-  width: 40px;
-  position: relative;
-  height: 1px;
-}
-
-.main .img {
-  flex: 1;
-  flex-grow: 1;
-  position: relative;
-  height: 1px;
-} */
-
 .svg-container-small {
   display: flex;
-  justify-content: center; /* Center the small SVG */
+  justify-content: center;
 }
 
 .svg-container-large {
-  width: 100%; /* Make sure the container fills the full width */
+  flex-grow: 1;
+  width: 100%;
 }
 
 .main .text-wrapper {
