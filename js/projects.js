@@ -227,3 +227,22 @@ document.addEventListener("DOMContentLoaded", () => {
   setupFilters();
   setupPagination();
 });
+
+function loadProjectDetails() {
+  // Get the current filename (e.g., "project1.html" -> "project1")
+  const fileName = window.location.pathname.split("/").pop().split(".")[0];
+
+  // Find the project that matches this filename
+  const project = projects.find(proj => proj.id === fileName);
+
+  if (project) {
+    document.getElementById("project-title").textContent = project.title;
+    document.getElementById("project-year").textContent = project.year;
+    document.getElementById("project-language").textContent = project.language;
+    document.getElementById("project-type").textContent = project.type;
+    document.getElementById("project-description").textContent = project.description;
+  }
+}
+
+// Run this function when the page loads
+document.addEventListener("DOMContentLoaded", loadProjectDetails);
