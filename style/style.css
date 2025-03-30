@@ -407,7 +407,7 @@
 
 .main .language-text-single {
   position: relative;
-  width: 138px;
+  min-width: 100px;
   margin-top: -4.5px;
   margin-bottom: -0.5px;
   font-family: "Outfit", serif;
@@ -645,7 +645,7 @@
   width: 100%;
 }
 
-ul {
+ol, ul {
   list-style: inside !important;
 }
 
