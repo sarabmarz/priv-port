@@ -132,7 +132,7 @@
   font-size: 32px;
   letter-spacing: 0;
   line-height: normal;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 .main .section-title {
