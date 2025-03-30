@@ -338,17 +338,6 @@
   flex: 0 0 auto;
 }
 
-.main .description {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  margin: 0px 0 40px 0;
-}
-
 .main .project-title-div {
   display: inline-flex;
   height: 40px;
@@ -647,13 +636,17 @@
 
 .main .description {
   display: flex;
-  height: 40px;
+  min-height: 40px;
   align-items: center;
   gap: 10px;
   padding: 20px 0px 10px;
   position: relative;
   align-self: stretch;
   width: 100%;
+}
+
+ul {
+  list-type: inside;
 }
 
 .main .desc-text {
@@ -849,6 +842,10 @@
 
 a {
   text-decoration: none;
+}
+
+ul a {
+text-decoration: underline;
 }
 
 a,
