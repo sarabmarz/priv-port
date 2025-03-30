@@ -244,23 +244,25 @@ document.addEventListener("DOMContentLoaded", () => {
   setupPagination();
 });
 
-function loadProjectDetails() {
-  // Get the current filename (e.g., "project1.html" -> "project1")
-  const fileName = window.location.pathname.split("/").pop().split(".")[0];
+document.addEventListener("DOMContentLoaded", function () {
+  function loadProjectDetails() {
+    // Get the current filename (e.g., "project1.html" -> "project1")
+    const fileName = window.location.pathname.split("/").pop().split(".")[0];
 
-  // Find the project that matches this filename
-  const project = projects.find(proj => proj.id === fileName);
+    // Find the project that matches this filename
+    const project = projects.find(proj => proj.id === fileName);
 
-  if (project) {
-    document.getElementById("project-title").textContent = project.title;
-    document.getElementById("project-year").textContent = project.year;
-    document.getElementById("project-language").textContent = project.language;
-    document.getElementById("project-type").textContent = project.type;
-    document.getElementById("project-description").textContent = project.description;
-} else {
-    console.error("Project not found:", projectId);
+    if (project) {
+      // Update the page content with project details
+      document.querySelector(".project-title").textContent = project.title;
+      document.querySelector(".year-text-single").textContent = project.year;
+      document.querySelector(".language-text-single").textContent = project.language;
+      document.querySelector(".text-title-small").textContent = project.type;
+      document.querySelector(".description-text").textContent = project.description;
+    } else {
+      console.error("Project not found:", fileName);
+    }
   }
-});
 
 // Run this function when the page loads
 document.addEventListener("DOMContentLoaded", loadProjectDetails);
