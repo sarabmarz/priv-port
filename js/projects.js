@@ -253,16 +253,25 @@ document.addEventListener("DOMContentLoaded", function () {
     const project = projects.find(proj => proj.id === fileName);
 
     if (project) {
-      // Update the page content with project details
-      document.querySelector(".project-title").textContent = project.title;
-      document.querySelector(".year-text-single").textContent = project.year;
-      document.querySelector(".language-text-single").textContent = project.language;
-      document.querySelector(".text-title-small").textContent = project.type;
-      document.querySelector(".description-text").textContent = project.description;
+      // Check if elements exist before updating them
+      const titleElement = document.querySelector(".project-title");
+      const yearElement = document.querySelector(".year-text-single");
+      const languageElement = document.querySelector(".language-text-single");
+      const typeElement = document.querySelector(".text-title-small");
+      const descriptionElement = document.querySelector(".description-text");
+
+      if (titleElement) titleElement.textContent = project.title;
+      if (yearElement) yearElement.textContent = project.year;
+      if (languageElement) languageElement.textContent = project.language;
+      if (typeElement) typeElement.textContent = project.type;
+      if (descriptionElement) descriptionElement.textContent = project.description;
     } else {
       console.error("Project not found:", fileName);
     }
   }
 
-// Run this function when the page loads
-document.addEventListener("DOMContentLoaded", loadProjectDetails);
+  // Only run on project pages
+  if (document.querySelector(".project-title")) {
+    loadProjectDetails();
+  }
+});
