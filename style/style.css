@@ -393,7 +393,7 @@
 
 .main .project-type {
   position: relative;
-  width: 138px;
+  min-width: 100px;
   margin-top: -4.5px;
   margin-bottom: -0.5px;
   font-family: "Outfit", serif;
