@@ -241,8 +241,10 @@ function loadProjectDetails() {
     document.getElementById("project-language").textContent = project.language;
     document.getElementById("project-type").textContent = project.type;
     document.getElementById("project-description").textContent = project.description;
+} else {
+    console.error("Project not found:", projectId);
   }
-}
+});
 
 // Run this function when the page loads
 document.addEventListener("DOMContentLoaded", loadProjectDetails);
