@@ -856,7 +856,7 @@ a:visited {
 }
 
 ::-webkit-scrollbar-track {
-	border: 1px solid var(--WHITE);
+	border-left: 1px solid var(--WHITE);
 	background-color: var(--BLACK);
 }
 
