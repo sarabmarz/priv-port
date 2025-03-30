@@ -1,14 +1,44 @@
 const projects = [
   {
     id: "project1",
-    title: "My Awesome Project",
+    title: "Run Santa Run!",
     type: "Games",
-    year: "2023",
-    language: "JavaScript",
-    description: "This is a detailed description of My Awesome Project.",
+    year: "2024",
+    language: "Unity / OpenCV",
+    description: "This project is an endless runner game that combines real-time hand gesture control using OpenCV with Unity-based game development. Built for the Image Processing and Vision course, it demonstrates advanced image processing techniques for hand tracking and gesture recognition.
+              <ul>
+                <li>Design elements are either handmade or from unity store</li>
+                <li>The fonts used in the game are <a href="https://fonts.google.com/specimen/Barriecito">Barriecito</a> & <a href="https://fonts.google.com/specimen/Mountains+of+Christmas">Mountains of Chirstmas</a></li>
+                <li>Music and sound effects were sourced from <a href="https://pixabay.com/">Pixabay</a></li>
+              </ul>",
   },
   {
     id: "project2",
+    title: "Phantom",
+    type: "Games",
+    year: "2023",
+    language: "Java",
+    description: "A small game group project done in Java for the Modelling and Simulation of Natural Systems course.<br>
+              In this game, you play as a Witch trapped in a haunted map filled with dangerous ghosts. To escape, you must defeat the ghosts, one of which will drop a key. Once you find the key, a portal appears, but the Witch still has to find it.<br>
+              The Witch is joined by her loyal Bat Companion and has two magical powers: freezing ghosts to stop them temporarily or electrocuting them to get rid of them for good.<br> 
+              
+              <strong>Art:</strong>
+              <ul>
+              <li><a href="https://penzilla.itch.io/hooded-protagonist">Hooded Protagonist</a> (Witch) made by <a href="https://penzilla.itch.io/">Penzilla</a></li>
+              <li><a href="https://creationr.itch.io/ghost-enemy-32-x-32">Ghosts</a> made by <a href="https://creationr.itch.io/">creationr</a></li>
+              <li><a href="https://eduardscarpato.itch.io/bat-animations-pixel-art-2d-free">Bat Companion</a> made by <a href="https://eduardscarpato.itch.io/">Eduardo Scarpato</a></li>
+            </ul>",
+  },
+  {
+    id: "project3",
+    title: "Another Great Project",
+    type: "Web Projects",
+    year: "2022",
+    language: "Unity",
+    description: "This is a detailed description of Another Great Project.",
+  },
+  {
+    id: "project4",
     title: "Another Great Project",
     type: "Web Projects",
     year: "2022",
