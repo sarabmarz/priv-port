@@ -876,3 +876,47 @@ a:visited {
 ::-webkit-scrollbar-thumb {
 	background-color: var(--WHITE);	
 }
+
+.project-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Stacked images */
+.full-width-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Flexbox row images */
+.flexbox-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.flexbox-row img {
+    width: calc(50% - 10px); /* Two per row */
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-video iframe {
+    width: 100%;
+    max-width: 800px; /* Keep it responsive */
+    height: 450px;
+    border-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .flexbox-row img {
+        width: 100%; /* Stack images on small screens */
+    }
+}
