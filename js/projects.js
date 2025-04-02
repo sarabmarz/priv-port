@@ -11,6 +11,14 @@ const projects = [
                 <li>The fonts used in the game are <a href="https://fonts.google.com/specimen/Barriecito">Barriecito</a> & <a href="https://fonts.google.com/specimen/Mountains+of+Christmas">Mountains of Chirstmas</a></li>
                 <li>Music and sound effects were sourced from <a href="https://pixabay.com/">Pixabay</a></li>
               </ul>`,
+    video: "https://vimeo.com/1043681367",
+    images: [
+      { src: "../img/projects/project1/1.png", layout: "stacked" },
+      { src: "../img/projects/project1/2.png", layout: "flexbox" },
+      { src: "../img/projects/project1/3.png", layout: "flexbox" },
+      { src: "../img/projects/project1/4.png", layout: "flexbox" },
+      { src: "../img/projects/project1/5.png", layout: "flexbox" }
+    ]
   },
   {
     id: "project2",
@@ -268,29 +276,62 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", function () {
   function loadProjectDetails() {
-    // Get the current filename (e.g., "project1.html" -> "project1")
     const fileName = window.location.pathname.split("/").pop().split(".")[0];
-
-    // Find the project that matches this filename
     const project = projects.find(proj => proj.id === fileName);
 
     if (project) {
-      // Check if elements exist before updating them
-      const titleElement = document.querySelector(".project-title");
-      const yearElement = document.querySelector(".year-text-single");
-      const languageElement = document.querySelector(".language-text-single");
-      const typeElement = document.querySelector(".text-title-small");
-      const descriptionElement = document.querySelector(".description-text");
+        document.getElementById("project-title").textContent = project.title;
+        document.getElementById("project-year").textContent = project.year;
+        document.getElementById("project-language").textContent = project.language;
+        document.getElementById("project-type").textContent = project.type;
+        document.getElementById("project-description").innerHTML = project.description;
 
-      if (titleElement) titleElement.textContent = project.title;
-      if (yearElement) yearElement.textContent = project.year;
-      if (languageElement) languageElement.textContent = project.language;
-      if (typeElement) typeElement.textContent = project.type;
-      if (descriptionElement) descriptionElement.innerHTML = project.description;
+        // Load video
+        const videoContainer = document.getElementById("project-video");
+        videoContainer.innerHTML = "";
+        if (project.video) {
+            const iframe = document.createElement("iframe");
+            iframe.src = project.video;
+            iframe.width = "100%";
+            iframe.height = "400px";
+            iframe.frameBorder = "0";
+            iframe.allow = "autoplay; fullscreen; picture-in-picture";
+            iframe.allowFullscreen = true;
+            videoContainer.appendChild(iframe);
+        }
+
+        // Load images dynamically
+        const imagesContainer = document.getElementById("project-images");
+        imagesContainer.innerHTML = "";
+
+        let flexContainer = null;
+
+        project.images.forEach((image, index) => {
+            const img = document.createElement("img");
+            img.src = image.src;
+            img.alt = project.title;
+
+            if (image.layout === "stacked") {
+                const fullWidthDiv = document.createElement("div");
+                fullWidthDiv.classList.add("full-width-image");
+                fullWidthDiv.appendChild(img);
+                imagesContainer.appendChild(fullWidthDiv);
+                flexContainer = null; // Reset flex container when switching layouts
+            } 
+            else if (image.layout === "flexbox") {
+                if (!flexContainer) {
+                    flexContainer = document.createElement("div");
+                    flexContainer.classList.add("flexbox-row");
+                    imagesContainer.appendChild(flexContainer);
+                }
+                flexContainer.appendChild(img);
+            }
+        });
     } else {
-      console.error("Project not found:", fileName);
+        console.error("Project not found:", fileName);
     }
-  }
+}
+
 
   // Only run on project pages
   if (document.querySelector(".project-title")) {
