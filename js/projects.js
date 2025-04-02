@@ -12,7 +12,7 @@ const projects = [
                 <li>Music and sound effects were sourced from <a href="https://pixabay.com/">Pixabay</a></li>
               </ul>`,
     video: "https://vimeo.com/1043681367",
-    titleImage: "../img/projects/project1/title.png"
+    titleImage: "../img/projects/project1/title.png",
     images: [
       { src: "../img/projects/project1/1.png", layout: "stacked" },
       { src: "../img/projects/project1/2.png", layout: "flexbox" },
