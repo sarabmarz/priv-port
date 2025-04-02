@@ -842,11 +842,19 @@ ol, ul {
   flex: 0 0 auto;
 }
 
+strong {
+font-weight: bold;
+}
+
+em {
+font-style: italic;
+}
+
 a {
   text-decoration: none;
 }
 
-ul a {
+ul a, .description-text a {
 text-decoration: underline;
 }
 
