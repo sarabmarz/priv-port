@@ -12,6 +12,7 @@ const projects = [
                 <li>Music and sound effects were sourced from <a href="https://pixabay.com/">Pixabay</a></li>
               </ul>`,
     video: "https://vimeo.com/1043681367",
+    titleImage: "../img/projects/project1/title.png"
     images: [
       { src: "../img/projects/project1/1.png", layout: "stacked" },
       { src: "../img/projects/project1/2.png", layout: "flexbox" },
@@ -70,28 +71,25 @@ let filteredProjects = [...projects]; // Start with all projects
 // Function to generate project cards for the current page
 function generateProjectCards(page = 1) {
   const projectsContainer = document.querySelector(".projects-cards");
-  projectsContainer.innerHTML = ""; // Clear existing projects
+  projectsContainer.innerHTML = ""; 
 
   const start = (page - 1) * projectsPerPage;
   const end = page * projectsPerPage;
   const visibleProjects = filteredProjects.slice(start, end);
 
-  visibleProjects.forEach((project, index) => {
-    const projectPage = `projects/project${index + 1}.html`; // Include folder path
+  visibleProjects.forEach((project) => {
+    const projectPage = `projects/${project.id}.html`;
 
     const card = document.createElement("div");
-    card.classList.add(
-      "project-card",
-      project.type.toLowerCase().replace(" ", "-")
-    );
+    card.classList.add("project-card", project.type.toLowerCase().replace(" ", "-"));
 
     card.innerHTML = `
       <div class="card-hover">
-        <a href="${projectPage}" class="button"> <!-- Now correctly points to the folder -->
+        <a href="${projectPage}" class="button">
           <div class="text-filter">SEE MORE</div>
         </a>
       </div>
-      <div class="project-image"></div>
+      <div class="project-image" style="background-image: url('${project.titleImage}');"></div>
       <div class="card-info">
         <div class="title-project">
           <div class="project-title-div">
@@ -115,6 +113,7 @@ function generateProjectCards(page = 1) {
     projectsContainer.appendChild(card);
   });
 }
+
 
 // Function to filter project cards
 function filterProjects(filter) {
@@ -286,7 +285,13 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("project-type").textContent = project.type;
         document.getElementById("project-description").innerHTML = project.description;
 
-        // Load video
+      // Set the title image dynamically
+        const titleImageDiv = document.querySelector(".project-image-single");
+        if (titleImageDiv && project.titleImage) {
+            titleImageDiv.style.backgroundImage = `url('${project.titleImage}')`;
+        }
+      
+      // Load video
         const videoContainer = document.getElementById("project-video");
         videoContainer.innerHTML = "";
         if (project.video) {
