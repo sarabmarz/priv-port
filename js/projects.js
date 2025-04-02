@@ -31,19 +31,27 @@ const projects = [
   },
   {
     id: "project3",
-    title: "Another Great Project",
-    type: "Web Projects",
+    title: "Forma",
+    type: "Games",
     year: "2022",
-    language: "Unity",
-    description: "This is a detailed description of Another Great Project.",
+    language: "Java",
+    description: `Forma is an arcade-style game inspired by <a href="https://poki.com/en/g/bubble-trouble">Bubble Trouble</a>. In Forma, you control a Stegosaurus shooting its plates to pop moving geometric shapes in an origami-themed world. The game features infinite levels with progressively dynamic difficulty, as shapes move more unpredictably and are harder to avoid.<br>
+Each shape has a unique movement pattern: circles follow a sine wave, triangles a triangular wave, and squares a square wave, all with randomly generated amplitudes. Players have five lives and limited time per level, losing a life if the timer runs out. Pop all shapes to advance without losing all your health or time!<br>
+              <ul>
+              <li>All design elements in <em>Forma</em> were homemade</li>
+              <li>The font used in the game is <a href="https://fonts.google.com/specimen/Delicious+Handrawn">Delicious Handrawn</a></li>
+              <li>Music and sound effects were sourced from <a href="https://pixabay.com/">Pixabay</a></li>
+            </ul>`,
   },
   {
     id: "project4",
-    title: "Another Great Project",
-    type: "Web Projects",
+    title: "2048",
+    type: "Games",
     year: "2022",
-    language: "Unity",
-    description: "This is a detailed description of Another Great Project.",
+    language: "Python",
+    description: `This game was created in two days during the summer break after the first semester of university, inspired by a recommendation from a Discrete Mathematics professor as a great exercise in both logic and programming.
+
+It incorporates concepts like probability (90% chance to generate a 2, 10% for a 4), matrix manipulation for the 4x4 grid, matrix transposition to handle vertical moves, and adjacency checks to combine tiles.`,
   },
 ];
 
