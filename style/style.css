@@ -923,6 +923,12 @@ a:visited {
     height: 100%;
 }
 
+.project-image, .project-image-single {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .flexbox-row img {
