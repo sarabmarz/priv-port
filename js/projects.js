@@ -71,25 +71,28 @@ let filteredProjects = [...projects]; // Start with all projects
 // Function to generate project cards for the current page
 function generateProjectCards(page = 1) {
   const projectsContainer = document.querySelector(".projects-cards");
-  projectsContainer.innerHTML = ""; 
+  projectsContainer.innerHTML = ""; // Clear existing projects
 
   const start = (page - 1) * projectsPerPage;
   const end = page * projectsPerPage;
   const visibleProjects = filteredProjects.slice(start, end);
 
-  visibleProjects.forEach((project) => {
-    const projectPage = `projects/${project.id}.html`;
+  visibleProjects.forEach((project, index) => {
+    const projectPage = `projects/project${index + 1}.html`; // Include folder path
 
     const card = document.createElement("div");
-    card.classList.add("project-card", project.type.toLowerCase().replace(" ", "-"));
+    card.classList.add(
+      "project-card",
+      project.type.toLowerCase().replace(" ", "-")
+    );
 
     card.innerHTML = `
       <div class="card-hover">
-        <a href="${projectPage}" class="button">
+        <a href="${projectPage}" class="button"> <!-- Now correctly points to the folder -->
           <div class="text-filter">SEE MORE</div>
         </a>
       </div>
-      <div class="project-image" style="background-image: url('${project.titleImage}');"></div>
+      <div class="project-image"></div>
       <div class="card-info">
         <div class="title-project">
           <div class="project-title-div">
