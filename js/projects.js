@@ -117,7 +117,6 @@ function generateProjectCards(page = 1) {
   });
 }
 
-
 // Function to filter project cards
 function filterProjects(filter) {
   const cards = document.querySelectorAll(".project-card");
@@ -287,12 +286,6 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("project-language").textContent = project.language;
         document.getElementById("project-type").textContent = project.type;
         document.getElementById("project-description").innerHTML = project.description;
-
-      // Set the title image dynamically
-        const titleImageDiv = document.querySelector(".project-image-single");
-        if (titleImageDiv && project.titleImage) {
-            titleImageDiv.style.backgroundImage = `url('${project.titleImage}')`;
-        }
       
       // Load video
         const videoContainer = document.getElementById("project-video");
