@@ -877,16 +877,24 @@ a:visited {
 	background-color: var(--WHITE);	
 }
 
+.project-media {
+	width: 70vw;
+	padding: 0 40px 60px;
+}
+
 .project-images {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     width: 100%;
-    max-width: 1200px;
     margin: auto;
 }
 
 /* Stacked images */
+
+.full-width-image {
+	padding: 20px 0;
+}
+
 .full-width-image img {
     width: 100%;
     height: auto;
@@ -896,18 +904,17 @@ a:visited {
 .flexbox-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .flexbox-row img {
     width: calc(50% - 10px); /* Two per row */
     height: auto;
+	padding-bottom: 20px;
 }
 
 .project-video {
     width: 100%;
-    max-width: 1200px; /* Adjust as needed */
     margin: auto;
     position: relative;
     padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
