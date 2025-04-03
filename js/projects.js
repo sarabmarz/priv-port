@@ -80,7 +80,7 @@ Each shape has a unique movement pattern: circles follow a sine wave, triangles 
     type: "Games",
     year: "2022",
     language: "Python",
-    description: `This game was created in two days during the summer break after the first semester of university, inspired by a recommendation from a Discrete Mathematics professor as a great exercise in both logic and programming.<br>It incorporates concepts like probability (90% chance to generate a 2, 10% for a 4), matrix manipulation for the 4x4 grid, matrix transposition to handle vertical moves, and adjacency checks to combine tiles.`,
+    description: `This game was created in two days during the summer break after the first semester of university, inspired by a recommendation from a Discrete Mathematics professor as a great exercise in both logic and programming.<br><br>It incorporates concepts like probability (90% chance to generate a 2, 10% for a 4), matrix manipulation for the 4x4 grid, matrix transposition to handle vertical moves, and adjacency checks to combine tiles.`,
     video: "https://player.vimeo.com/video/1043297878?h=cae1cdac72",
     titleImage: "../img/projects/project4/title.png",
     images: [
