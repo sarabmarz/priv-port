@@ -6,12 +6,13 @@ const projects = [
     year: "2024",
     language: "Unity / OpenCV",
     description: `This project is an endless runner game that combines real-time hand gesture control using OpenCV with Unity-based game development. Built for the Image Processing and Vision course, it demonstrates advanced image processing techniques for hand tracking and gesture recognition.
+              <br>
               <ul>
                 <li>Design elements are either handmade or from unity store</li>
                 <li>The fonts used in the game are <a href="https://fonts.google.com/specimen/Barriecito">Barriecito</a> & <a href="https://fonts.google.com/specimen/Mountains+of+Christmas">Mountains of Chirstmas</a></li>
                 <li>Music and sound effects were sourced from <a href="https://pixabay.com/">Pixabay</a></li>
               </ul>`,
-    video: "https://vimeo.com/1043681367",
+    video: "https://player.vimeo.com/video/1043681367?h=100514b353",
     titleImage: "../img/projects/project1/title.png",
     images: [
       { src: "../img/projects/project1/1.png", layout: "stacked" },
@@ -30,13 +31,22 @@ const projects = [
     description: `A small game group project done in Java for the Modelling and Simulation of Natural Systems course.<br>
               In this game, you play as a Witch trapped in a haunted map filled with dangerous ghosts. To escape, you must defeat the ghosts, one of which will drop a key. Once you find the key, a portal appears, but the Witch still has to find it.<br>
               The Witch is joined by her loyal Bat Companion and has two magical powers: freezing ghosts to stop them temporarily or electrocuting them to get rid of them for good.<br> 
-              
+              <br>
               <strong>Art:</strong>
+              <br>
               <ul>
               <li><a href="https://penzilla.itch.io/hooded-protagonist">Hooded Protagonist</a> (Witch) made by <a href="https://penzilla.itch.io/">Penzilla</a></li>
               <li><a href="https://creationr.itch.io/ghost-enemy-32-x-32">Ghosts</a> made by <a href="https://creationr.itch.io/">creationr</a></li>
               <li><a href="https://eduardscarpato.itch.io/bat-animations-pixel-art-2d-free">Bat Companion</a> made by <a href="https://eduardscarpato.itch.io/">Eduardo Scarpato</a></li>
             </ul>`,
+    video: "https://player.vimeo.com/video/1042634186?h=a910b89763",
+    titleImage: "../img/projects/project2/title.png",
+    images: [
+      { src: "../img/projects/project2/1.png", layout: "flexbox" },
+      { src: "../img/projects/project2/2.png", layout: "flexbox" },
+      { src: "../img/projects/project2/3.png", layout: "flexbox" },
+      { src: "../img/projects/project2/4.png", layout: "stacked" }
+    ] 
   },
   {
     id: "project3",
@@ -45,12 +55,24 @@ const projects = [
     year: "2022",
     language: "Java",
     description: `Forma is an arcade-style game inspired by <a href="https://poki.com/en/g/bubble-trouble">Bubble Trouble</a>. In Forma, you control a Stegosaurus shooting its plates to pop moving geometric shapes in an origami-themed world. The game features infinite levels with progressively dynamic difficulty, as shapes move more unpredictably and are harder to avoid.<br>
-Each shape has a unique movement pattern: circles follow a sine wave, triangles a triangular wave, and squares a square wave, all with randomly generated amplitudes. Players have five lives and limited time per level, losing a life if the timer runs out. Pop all shapes to advance without losing all your health or time!<br>
+Each shape has a unique movement pattern: circles follow a sine wave, triangles a triangular wave, and squares a square wave, all with randomly generated amplitudes. Players have five lives and limited time per level, losing a life if the timer runs out. Pop all shapes to advance without losing all your health or time!<br><br>
               <ul>
               <li>All design elements in <em>Forma</em> were homemade</li>
               <li>The font used in the game is <a href="https://fonts.google.com/specimen/Delicious+Handrawn">Delicious Handrawn</a></li>
               <li>Music and sound effects were sourced from <a href="https://pixabay.com/">Pixabay</a></li>
             </ul>`,
+    video: "https://player.vimeo.com/video/1043433585?h=bf942ad57e",
+    titleImage: "../img/projects/project3/title.png",
+    images: [
+      { src: "../img/projects/project3/1.png", layout: "stacked" },
+      { src: "../img/projects/project3/2.png", layout: "stacked" },
+      { src: "../img/projects/project3/3.png", layout: "stacked" },
+      { src: "../img/projects/project3/4.png", layout: "flexbox" },
+      { src: "../img/projects/project3/5.png", layout: "flexbox" },
+      { src: "../img/projects/project3/6.png", layout: "flexbox" },
+      { src: "../img/projects/project3/7.png", layout: "flexbox" },
+      { src: "../img/projects/project3/8.png", layout: "stacked" }
+    ] 
   },
   {
     id: "project4",
@@ -58,9 +80,14 @@ Each shape has a unique movement pattern: circles follow a sine wave, triangles 
     type: "Games",
     year: "2022",
     language: "Python",
-    description: `This game was created in two days during the summer break after the first semester of university, inspired by a recommendation from a Discrete Mathematics professor as a great exercise in both logic and programming.
-
-It incorporates concepts like probability (90% chance to generate a 2, 10% for a 4), matrix manipulation for the 4x4 grid, matrix transposition to handle vertical moves, and adjacency checks to combine tiles.`,
+    description: `This game was created in two days during the summer break after the first semester of university, inspired by a recommendation from a Discrete Mathematics professor as a great exercise in both logic and programming.<br>It incorporates concepts like probability (90% chance to generate a 2, 10% for a 4), matrix manipulation for the 4x4 grid, matrix transposition to handle vertical moves, and adjacency checks to combine tiles.`,
+    video: "https://player.vimeo.com/video/1043297878?h=cae1cdac72",
+    titleImage: "../img/projects/project4/title.png",
+    images: [
+      { src: "../img/projects/project4/1.png", layout: "flexbox" },
+      { src: "../img/projects/project4/2.png", layout: "flexbox" },
+      { src: "../img/projects/project4/3.png", layout: "flexbox" }
+    ] 
   },
 ];
 
