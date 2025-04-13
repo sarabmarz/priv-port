@@ -119,7 +119,7 @@ function generateProjectCards(page = 1) {
           <div class="text-filter">SEE MORE</div>
         </a>
       </div>
-      <div class="project-image" style="background-image: url('${project.titleImage}');"></div>
+      <div class="project-image" style="background-image: url('${project.titleImage.replace("../", "")}');"></div>
       <div class="card-info">
         <div class="title-project">
           <div class="project-title-div">
