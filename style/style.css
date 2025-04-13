@@ -259,6 +259,7 @@
   align-items: flex-start;
   gap: 32px;
   position: relative;
+	overflow: hidden;
 }
 
 .main .project-card-single {
@@ -283,7 +284,14 @@
   left: 0;
   z-index: 2;
   background-color: var(--BLACK-HOVER);
-  opacity: 100;
+  opacity: 0;
+	transition: opacity 0.3s ease;
+	pointer-events: none;
+}
+
+.project-card:hover .card-hover {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .main .button {
